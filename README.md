@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CPU Scheduling Simulator
+
+An interactive, professional CPU scheduling algorithm simulator built with **Next.js** and **React**. Visualize and compare 6 classic scheduling algorithms with real-time Gantt charts and performance metrics.
+
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![React](https://img.shields.io/badge/React-18-61dafb?logo=react)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## Algorithms
+
+| Algorithm | Type | Description |
+|-----------|------|-------------|
+| **FCFS** | Non-Preemptive | First Come First Served — processes execute in arrival order |
+| **SRTF** | Preemptive | Shortest Remaining Time First — always runs the job closest to completion |
+| **Round Robin** | Preemptive | Time-sliced scheduling with configurable quantum |
+| **Priority (NP)** | Non-Preemptive | Runs highest-priority arrived process to completion |
+| **Priority (P)** | Preemptive | Higher-priority arrivals interrupt running processes |
+| **MLFQ** | Preemptive | Multilevel Feedback Queue with dynamic quantum (q = 2 × level) |
+
+## Features
+
+- **Interactive Process Editor** — Add, remove, and edit processes directly in the browser
+- **File Upload** — Import process data from text files
+- **Random Generator** — Quick-generate random process sets for testing
+- **Gantt Chart Visualization** — Color-coded timeline blocks with hover tooltips
+- **Performance Metrics** — Avg turnaround, avg waiting, CPU utilization, throughput
+- **Algorithm Comparison** — Run all 6 algorithms simultaneously and compare results side-by-side
+- **Responsive Design** — Works on desktop, tablet, and mobile
+- **Dark Mode** — Premium dark UI with glassmorphism and gradient accents
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Input File Format
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+Process Burst Priority Arrival
+P1      4     3        0
+P2      8     1        1
+P3      2     4        3
+P4      6     5        10
+P5      5     2        12
+```
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 15 (App Router)
+- **UI**: React 18
+- **Styling**: Vanilla CSS (no Tailwind)
+- **Fonts**: Inter + JetBrains Mono
+- **Deployment**: Vercel-ready
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Origin
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is a professional reimagining of a CPU scheduling assignment originally written in C for COMP-3300: Operating Systems. The core scheduling algorithms have been ported from C to JavaScript and wrapped in a modern, interactive web interface.

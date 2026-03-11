@@ -1,0 +1,6 @@
+Process Burst Priority Arrival
+P1      4     3        0
+P2      8     1        1
+P3      2     4        3
+P4      6     5        10
+P5      5     2        12
