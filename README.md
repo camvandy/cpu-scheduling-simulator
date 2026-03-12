@@ -19,21 +19,21 @@ A professional, interactive web application for simulating and comparing CPU sch
 
 ### Algorithm Selection & Process Editor
 <div align="center">
-<img src="docs/screenshots/hero.png" alt="CPU Scheduling Simulator — Algorithm selection and process editor" width="800"/>
+<img src="docs/screenshots/hero.png?v=2026" alt="CPU Scheduling Simulator — Algorithm selection and process editor" width="800"/>
 </div>
 
 > Select from 6 scheduling algorithms, configure process data interactively, or upload from a file.
 
 ### Simulation Results & Gantt Chart
 <div align="center">
-<img src="docs/screenshots/results.png" alt="FCFS results with performance metrics, Gantt chart, and scheduling table" width="800"/>
+<img src="docs/screenshots/results.png?v=2026" alt="FCFS results with performance metrics, Gantt chart, and scheduling table" width="800"/>
 </div>
 
 > View performance metrics, visualize execution on a color-coded Gantt chart, and inspect per-process scheduling details.
 
 ### Algorithm Comparison Mode
 <div align="center">
-<img src="docs/screenshots/comparison.png" alt="Side-by-side comparison of all 6 scheduling algorithms" width="800"/>
+<img src="docs/screenshots/comparison.png?v=2026" alt="Side-by-side comparison of all 6 scheduling algorithms" width="800"/>
 </div>
 
 > Run all 6 algorithms simultaneously and compare turnaround time, waiting time, CPU utilization, and throughput in a single view.
