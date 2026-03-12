@@ -25,7 +25,7 @@ export default function ProcessTable({ processes, onChange, selectedAlgorithm })
   };
 
   const generateRandom = () => {
-    const count = Math.floor(Math.random() * 4) + 4; // 4–7 processes
+    const count = Math.floor(Math.random() * 4) + 4;
     const procs = [];
     for (let i = 0; i < count; i++) {
       procs.push(
@@ -65,10 +65,13 @@ export default function ProcessTable({ processes, onChange, selectedAlgorithm })
 
   return (
     <div className="process-table-section">
-      <h2 className="section-title">
-        <span className="section-icon">📋</span>
-        Process Data
-      </h2>
+      <div className="table-header-bar">
+        <h2 className="section-title" style={{ marginBottom: 0 }}>
+          <span className="section-icon">📋</span>
+          Process Data
+        </h2>
+        <span className="process-count">{processes.length} {processes.length === 1 ? 'process' : 'processes'}</span>
+      </div>
 
       <div className="table-actions">
         <button className="btn btn-primary" onClick={addProcess}>+ Add Process</button>
@@ -93,7 +96,7 @@ export default function ProcessTable({ processes, onChange, selectedAlgorithm })
           </thead>
           <tbody>
             {processes.map((p, idx) => (
-              <tr key={idx} className="process-row">
+              <tr key={idx} className="process-row" style={{ '--row-delay': `${idx * 20}ms` }}>
                 <td>
                   <div className="pid-badge">P{p.pid}</div>
                 </td>

@@ -27,10 +27,10 @@ export default function ResultsTable({ processes }) {
             {processes.map((p, idx) => (
               <tr key={p.pid} className="result-row" style={{ animationDelay: `${idx * 60}ms` }}>
                 <td><span className="pid-badge">P{p.pid}</span></td>
-                <td>{p.arrival}</td>
-                <td>{p.burst}</td>
-                <td>{p.priority}</td>
-                <td>{p.start}</td>
+                <td className="metric-cell">{p.arrival}</td>
+                <td className="metric-cell">{p.burst}</td>
+                <td className="metric-cell">{p.priority}</td>
+                <td className="metric-cell">{p.start}</td>
                 <td className="highlight-cell">{p.finish}</td>
                 <td className="highlight-cell">{p.turnaround}</td>
                 <td className="highlight-cell">{p.waiting}</td>
